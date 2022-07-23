@@ -7,13 +7,16 @@ class Paddle(Turtle):
         Takes the positional argument as a tuple.
     """
 
-    def __init__(self, position):
+    def __init__(self, position) -> None:
         super().__init__()
         self.shape("square")
         self.color("blue")
         self.shapesize(stretch_wid=5, stretch_len=1)
         self.penup()
         self.setposition(position)
+
+    def __str__(self) -> str:
+        return "Paddle provided to each player."
 
     def move_up(self):
         """ Allows the player to move the paddle up."""

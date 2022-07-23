@@ -4,7 +4,7 @@ from turtle import Turtle
 class Net(Turtle):
     """ Places a net in the middle of the screen. """
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         # self.hideturtle()
         self.penup()
@@ -13,7 +13,10 @@ class Net(Turtle):
         self.setheading(270)
         self.width(5)
 
-    def draw_net(self):
+    def __str__(self) -> str:
+        return 'Establishes the "net" on the game board.'
+
+    def draw_net(self) -> None:
         """ Draws the net on screen. """
         for _ in range(30):
             self.pendown()

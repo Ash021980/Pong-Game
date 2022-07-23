@@ -4,7 +4,7 @@ from turtle import Turtle
 class Ball(Turtle):
     """ Creates the ball object and initiates its movement. """
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.shape("circle")
         self.color("yellow")
@@ -12,6 +12,9 @@ class Ball(Turtle):
         self.x_move = 10
         self.y_move = 10
         self.move_speed = 0.1
+
+    def __str__(self) -> str:
+        return "The ball needed to play the game."
 
     def move(self):
         """ Moves the ball across the screen. """
